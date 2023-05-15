@@ -33,7 +33,7 @@ console.log(`El monto Total inicial es de: $ ${carrito.montoTotal} con el produc
 carrito.agregarProducto("azúcar", 1000, 2);
 carrito.agregarProducto("Yerba", 500, 3);
 carrito.agregarProducto("Harina", 400, 1);
-carrito.agregarProducto("Leche", 400, 2);
+carrito.agregarProducto("Leche", 400, 3);
 
 console.log(`El monto total es de: $ ${carrito.montoTotal}`);
 console.log(`y los productos son: ${carrito.productos}`);
