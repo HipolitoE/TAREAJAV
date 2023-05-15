@@ -1,19 +1,22 @@
-class GenerarCarrito {
+class Carrito {
     montoTotal = 0;
     productos = [];
+    cantidad = []
   
     constructor(montoTotal, productos) {
-      this.montoTotal = montoTotal;
-      this.productos = productos;
+      this.montoTotal = 0;
+      this.productos = [];
+      this.cantidad = [];
     }
   
-    agregarProducto(nombre, precio) {
+    agregarProducto(nombre, precio, cantidad) {
       if (this.productos.includes(nombre)) {
         console.log(`Ya existe el producto ${nombre} en el carrito`);
       } else {
-        console.log(`* Producto agregado al carrito: ${nombre} - Precio $ ${precio}`);
+        console.log(`* Producto agregado al carrito: ${nombre} - Precio $ ${precio} - ${cantidad}`);
         this.productos.push(nombre);
         this.actualizarMontoTotal(precio);
+        this.cantidad.push(cantidad)
       }
     }
   
@@ -25,7 +28,7 @@ class GenerarCarrito {
   
   let montoInicial = 0;
   let productosIniciales = [];
-  let carrito = new GenerarCarrito(montoInicial, productosIniciales);
+  let carrito = new Carrito(montoInicial, productosIniciales);
   
   console.log(`El monto Total inicial es de: $ ${carrito.montoTotal} con el producto: ${carrito.productos}`);
   carrito.agregarProducto("azúcar", 1000);
