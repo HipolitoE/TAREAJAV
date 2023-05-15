@@ -15,8 +15,7 @@ class Carrito {
       } else {
         console.log(`* Producto agregado al carrito: ${nombre} - Precio $ ${precio} - ${cantidad}`);
         this.productos.push(nombre);
-        this.actualizarMontoTotal(precio);
-        this.cantidad.push(cantidad)
+        this.actualizarMontoTotal(precio*cantidad);
       }
     }
   
@@ -31,10 +30,12 @@ class Carrito {
   let carrito = new Carrito(montoInicial, productosIniciales);
   
   console.log(`El monto Total inicial es de: $ ${carrito.montoTotal} con el producto: ${carrito.productos}`);
-  carrito.agregarProducto("azúcar", 1000);
-  carrito.agregarProducto("Yerba", 500);
-  carrito.agregarProducto("Harina", 400);
-  carrito.agregarProducto("Leche", 400);
+  carrito.agregarProducto("azúcar", 1000, 2);
+  carrito.agregarProducto("Yerba", 500, 3);
+  carrito.agregarProducto("Harina", 400, 5);
+  carrito.agregarProducto("Leche", 400, 1);
   
   console.log(`El monto total es de: $ ${carrito.montoTotal}`);
   console.log(`y los productos son: ${carrito.productos}`);
+
+  // CORRECCION EJERCICIO 2 Y 3 
