@@ -32,7 +32,7 @@ class Carrito {
   console.log(`El monto Total inicial es de: $ ${carrito.montoTotal} con el producto: ${carrito.productos}`);
   carrito.agregarProducto("azúcar", 1000, 2);
   carrito.agregarProducto("Yerba", 500, 3);
-  carrito.agregarProducto("Harina", 400, 5);
+  carrito.agregarProducto("Harina", 400, 4);
   carrito.agregarProducto("Leche", 400, 1);
   
   console.log(`El monto total es de: $ ${carrito.montoTotal}`);
